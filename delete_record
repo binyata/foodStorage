@@ -1,0 +1,16 @@
+<?php
+
+
+$conn = mysql_connect('localhost', 'root', '');
+	$db   = mysql_select_db('foodstorage');
+
+	
+	$id              = $_POST['id1'];
+
+	if (mysql_query("DELETE FROM storage where ID = '$id';")){
+		echo "Successfully Inserted";
+	} else {
+		echo "Failed";
+	}
+
+?>
